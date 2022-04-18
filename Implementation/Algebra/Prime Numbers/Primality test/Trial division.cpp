@@ -4,10 +4,9 @@ typedef long long ll;
 
 
 bool isPrime(ll x) {
-    if(x==1)return false;
-    for (ll d = 2; d * d <= x; d++) {
-        if (x % d == 0)
-            return false;
+    if((x<=1)||((x!=2)&&(x%2==0)))return false;
+    for (ll d = 3; d * d <= x; d+=2) {
+        if (x % d == 0)return false;
     }
     return true;
 }
