@@ -2,10 +2,7 @@
 using namespace std;
 typedef long long ll;
 
-constexpr ll mod=998244353;
-
-ll binpow(ll base, ll power)
-{
+ll binpow(ll base, ll power, ll mod){
     base%=mod;
     power%=(mod-1);
     ll result=1;
@@ -17,7 +14,6 @@ ll binpow(ll base, ll power)
     return result;
 }
 
-ll modInv(ll a)
-{
+ll modInv(ll a, ll mod){
     return binpow(a,mod-2,mod);
 }
